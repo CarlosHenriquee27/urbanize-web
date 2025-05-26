@@ -25,11 +25,3 @@ Este repositório contém a estrutura frontend inicial do projeto, utilizando um
 1.  Clone ou baixe este repositório.
 2.  Navegue até a pasta do projeto.
 3.  Abra o arquivo `index.html` diretamente no seu navegador de internet.
-
-## Autor
-
-* Carlos Henrique
-
-## Disciplina
-
-* Programação para Web
