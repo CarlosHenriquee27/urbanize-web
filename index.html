@@ -1,32 +1,284 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Urbanize</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Urbanize</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Carlos Henrique (Adaptado de Ranyeh - Inazuma Template)" />
+    <meta name="description" content="Urbanize: Plataforma de Monitoramento Urbano para facilitar a comunicação entre cidadãos e gestão pública." />
+    <meta name="keywords" content="urbanize, monitoramento urbano, cidadania, gestão pública, problemas urbanos" />
 
-  <main>
-    <section class="descricao">
-      <h2>Bem-vindo ao Urbanize</h2>
-      <p>O Urbanize é um aplicativo de monitoramento urbano, feito para melhorar a comunicação entre cidadãos e autoridades.</p>
-    </section>
-  </main>
+    <title>Urbanize | Plataforma de Monitoramento Urbano</title>
 
-  <footer>
-    <p>&copy; 2025 Urbanize - Todos os direitos reservados.</p>
-  </footer>
-</body>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" /> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <div class="page-loading fixed top-0 bottom-0 left-0 right-0 z-[99999] flex items-center justify-center bg-primary-light-1 dark:bg-primary-dark-1 opacity-100 visible pointer-events-auto" role="status" aria-live="polite" aria-atomic="true" aria-label="Carregando...">
+      <div class="grid-loader">
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      </div>
+    </div>
+
+    <header class="ic-navbar absolute left-0 top-0 z-40 flex w-full items-center bg-transparent" role="banner" aria-label="Barra de Navegação">
+      <div class="container">
+        <div class="ic-navbar-container relative -mx-5 flex items-center justify-between">
+          <div class="w-60 lg:w-56 max-w-full px-5">
+            <a href="." class="ic-navbar-logo block w-full py-5 text-2xl font-bold text-primary-color">
+              Urbanize
+            </a>
+          </div>
+          <div class="flex w-full items-center justify-between px-5">
+            <div>
+              <button type="button" class="ic-navbar-toggler absolute right-4 top-1/2 block -translate-y-1/2 rounded-md px-3 py-[6px] text-[22px]/none text-primary-color ring-primary focus:ring-2 lg:hidden" data-web-toggle="navbar-collapse" data-web-target="navbarMenu" aria-expanded="false" aria-label="Alternar menu de navegação">
+                <i class="lni lni-menu"></i>
+              </button>
+
+              <nav id="navbarMenu" class="ic-navbar-collapse absolute right-4 top-[80px] w-full max-w-[250px] rounded-lg hidden bg-primary-light-1 py-5 shadow-lg dark:bg-primary-dark-1 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
+                <ul class="block lg:flex" role="menu" aria-label="Menu de Navegação">
+                  <li class="group relative">
+                    <a href="#home" class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 active" role="menuitem">Início</a>
+                  </li>
+                  <li class="group relative">
+                    <a href="#sobre-urbanize" class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70" role="menuitem">Sobre o Urbanize</a>
+                  </li>
+                  <li class="group relative">
+                    <a href="#registrar-ocorrencia" class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70" role="menuitem">Registrar Ocorrência</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="flex items-center justify-end pr-[52px] lg:pr-0">
+              <button type="button" class="inline-flex items-center text-primary-color text-[24px]/none" aria-label="Mudar tema" data-web-trigger="web-theme"></button>
+              <div class="hidden sm:flex">
+                <a href="#login" class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary-color bg-opacity-20 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary" role="button">Login</a>
+                 </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main relative">
+      <section id="home" class="relative overflow-hidden bg-primary text-primary-color pt-[120px] md:pt-[130px] lg:pt-[160px]">
+        <div class="container">
+          <div class="-mx-5 flex flex-wrap items-center">
+            <div class="w-full px-5">
+              <div class="scroll-revealed mx-auto max-w-[780px] text-center">
+                <h1 class="mb-6 text-3xl font-bold leading-snug text-primary-color sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight">
+                  Urbanize: Conectando Cidadãos e Gestão Pública
+                </h1>
+                <p class="mx-auto mb-9 max-w-[600px] text-base text-primary-color sm:text-lg sm:leading-normal">
+                  Facilitamos o registro e acompanhamento de problemas urbanos para melhorar nossa cidade. Juntos, podemos fazer a diferença!
+                </p>
+                <ul class="mb-10 flex flex-wrap items-center justify-center gap-4 md:gap-5">
+                  <li>
+                    <a href="#registrar-ocorrencia" class="ic-page-scroll inline-flex items-center justify-center rounded-md bg-primary-color text-primary px-5 py-3 text-center text-base font-medium shadow-md hover:bg-primary-light-5 md:px-7 md:py-[14px]" role="button">Reportar um Problema</a>
+                  </li>
+                  <li>
+                    <a href="#sobre-urbanize" class="ic-page-scroll flex items-center gap-4 rounded-md bg-primary-color/[0.15] px-5 py-3 text-base font-medium text-primary-color hover:bg-primary-color hover:text-primary md:px-7 md:py-[14px]" role="button">
+                      <i class="lni lni-question-circle text-lg/none"></i> Saiba Mais
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="w-full px-5">
+              <div class="scroll-revealed relative z-10 mx-auto max-w-[845px]">
+                <figure class="mt-16">
+                  <img src="./assets/img/hero.png" alt="Imagem representativa da cidade ou do app Urbanize" class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"/>
+                </figure>
+                <div class="absolute -left-9 bottom-0 z-[-1]">
+                  <img src="./assets/img/dots.svg" alt="" class="w-[120px] opacity-75"/>
+                </div>
+                <div class="absolute -right-6 -top-6 z-[-1]">
+                  <img src="./assets/img/dots.svg" alt="" class="w-[120px] opacity-75"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre-urbanize" class="section-area">
+        <div class="container">
+          <div class="grid grid-cols-1 gap-14 lg:grid-cols-2 items-center">
+            <div class="w-full">
+              <figure class="scroll-revealed max-w-[480px] mx-auto">
+                <img src="./assets/img/about-img.jpg" alt="Sobre o Urbanize" class="rounded-xl"/>
+              </figure>
+            </div>
+            <div class="w-full">
+              <div class="scroll-revealed">
+                <h6 class="mb-2 block text-lg font-semibold text-primary">
+                  Sobre o Urbanize
+                </h6>
+                <h2 class="mb-6">Nossa Missão é Melhorar Nossas Cidades</h2>
+                <p>
+                  O Urbanize é uma plataforma pensada para você, cidadão, que quer ver sua cidade melhor. Aqui, você pode reportar problemas como buracos, falta de iluminação, lixo em local inadequado, e muito mais.
+                </p>
+                <p class="mt-4">
+                  Nossa equipe (no caso, Carlos Henrique!) está trabalhando para que a gestão pública receba essas informações de forma organizada e possa agir. Acompanhe o status do seu reporte e participe ativamente da melhoria do seu bairro!
+                </p>
+                <p class="mt-4">
+                  Este projeto está em desenvolvimento para a disciplina de Programação Web.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="registrar-ocorrencia" class="section-area bg-primary-light-2 dark:bg-primary-dark-2">
+        <div class="container">
+          <div class="scroll-revealed bg-body-light-1 dark:bg-primary-dark-1 rounded-xl py-8 sm:py-12 px-6 sm:px-10 z-10 relative shadow-card-1 hover:shadow-lg">
+            <div class="text-center max-w-[550px] mx-auto mb-12">
+              <h6 class="mb-2 block text-lg font-semibold text-primary">
+                Participe!
+              </h6>
+              <h2 class="mb-3">Registre um Problema Urbano</h2>
+              <p>
+                Viu algo que precisa ser consertado ou melhorado na cidade? Nos ajude preenchendo o formulário abaixo.
+              </p>
+            </div>
+
+            <form action="#" method="POST" class="flex flex-col gap-6">
+              <div class="row">
+                <div class="col-12 md:col-6">
+                  <label for="user-name" class="mb-2 block text-sm font-medium text-body-light-11 dark:text-body-dark-11">Seu Nome (Opcional)</label>
+                  <input id="user-name" type="text" name="name" class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" placeholder="Digite seu nome"/>
+                </div>
+
+                <div class="col-12 md:col-6">
+                  <label for="user-email" class="mb-2 block text-sm font-medium text-body-light-11 dark:text-body-dark-11">Seu Email (Opcional, para atualizações)</label>
+                  <input id="user-email" type="email" name="email" class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" placeholder="seuemail@exemplo.com"/>
+                </div>
+
+                <div class="col-12 md:col-6">
+                  <label for="problem-type" class="mb-2 block text-sm font-medium text-body-light-11 dark:text-body-dark-11">Tipo de Problema <span class="text-red-500">*</span></label>
+                  <select id="problem-type" name="problem_type" class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary bg-white dark:bg-primary-dark-2" required>
+                    <option value="">Selecione o tipo...</option>
+                    <option value="buraco_via">Buraco na Via</option>
+                    <option value="lixo_acumulado">Lixo Acumulado</option>
+                    <option value="iluminacao_publica">Iluminação Pública Defeituosa</option>
+                    <option value="sinalizacao_danificada">Sinalização Danificada</option>
+                    <option value="vazamento_agua_esgoto">Vazamento de Água/Esgoto</option>
+                    <option value="terreno_baldio">Terreno Baldio / Mato Alto</option>
+                    <option value="transporte_publico">Problemas com Transporte Público</option>
+                    <option value="outro">Outro</option>
+                  </select>
+                </div>
+
+                <div class="col-12 md:col-6">
+                  <label for="problem-location" class="mb-2 block text-sm font-medium text-body-light-11 dark:text-body-dark-11">Localização Exata <span class="text-red-500">*</span></label>
+                  <input id="problem-location" type="text" name="location" class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" placeholder="Endereço ou ponto de referência" required/>
+                </div>
+                
+                <div class="col-12">
+                  <label for="problem-description" class="mb-2 block text-sm font-medium text-body-light-11 dark:text-body-dark-11">Descrição Detalhada do Problema <span class="text-red-500">*</span></label>
+                  <textarea id="problem-description" name="description" rows="5" class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" placeholder="Descreva o problema com o máximo de detalhes possível..." required></textarea>
+                </div>
+
+                <div class="col-12">
+                  <label for="problem-photo" class="mb-2 block text-sm font-medium text-body-light-11 dark:text-body-dark-11">Foto do Problema (Opcional)</label>
+                  <input id="problem-photo" type="file" name="photo" class="block w-full text-sm text-body-light-11 dark:text-body-dark-11 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary-color file:text-primary hover:file:bg-primary-light-5"/>
+                </div>
+
+                <div class="col-12">
+                  <div class="w-full text-center">
+                    <button type="submit" class="inline-block px-7 py-3 rounded-md text-base bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10 font-medium">
+                      Enviar Ocorrência
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      </main>
+
+    <footer class="bg-primary-dark-2 text-white">
+      <div class="container py-20 lg:py-[100px]">
+        <div class="row justify-center"> {/* Centralizando o conteúdo do rodapé que restou */}
+          <div class="col-12 lg:col-6 text-center lg:text-left">
+            <div class="w-full">
+              <a href="." class="inline-block mb-5 text-2xl font-bold text-white">
+                Urbanize
+              </a>
+              <p class="mb-8 text-body-dark-11">
+                Uma plataforma para conectar cidadãos e gestão pública, melhorando nossas cidades.
+              </p>
+              <div class="flex items-center justify-center lg:justify-start gap-5">
+                <a href="javascript:void(0)" class="text-body-dark-11 hover:text-primary text-[22px] leading-none" aria-label="Facebook">
+                  <i class="lni lni-facebook-fill"></i>
+                </a>
+                <a href="javascript:void(0)" class="text-body-dark-11 hover:text-primary text-[22px] leading-none" aria-label="Twitter">
+                  <i class="lni lni-twitter-original"></i>
+                </a>
+                <a href="javascript:void(0)" class="text-body-dark-11 hover:text-primary text-[22px] leading-none" aria-label="Instagram">
+                  <i class="lni lni-instagram-original"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* As colunas de links do footer original foram removidas para simplificar */}
+        </div>
+      </div>
+      <div class="w-full border-t border-solid border-alpha-dark"></div>
+      <div class="container py-8">
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-1/2">
+            <div class="my-1">
+              <div class="flex flex-wrap justify-center gap-x-3 md:justify-start">
+                <a href="javascript:void(0)" class="text-body-dark-11 hover:text-body-dark-12">Política de Privacidade</a>
+                <a href="javascript:void(0)" class="text-body-dark-11 hover:text-body-dark-12">Termos de Serviço</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2">
+            <div class="my-1 flex justify-center md:justify-end">
+              <p class="text-body-dark-11">
+                © 2024 Urbanize (Template base: Inazuma por Ranyeh, distribuído por ThemeWagon)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button type="button" class="inline-flex w-12 h-12 rounded-md items-center justify-center text-lg/none bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10 fixed bottom-[117px] right-[20px] hover:-translate-y-1 opacity-100 visible z-50 is-hided" data-web-trigger="scroll-top" aria-label="Voltar ao topo">
+      <i class="lni lni-chevron-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+      // Script ScrollReveal (Mantido do template Inazuma)
+      const sr = ScrollReveal({
+        origin: "bottom",
+        distance: "16px",
+        duration: 1000,
+        reset: false,
+      });
+      sr.reveal(`.scroll-revealed`, {
+        cleanup: true,
+      });
+
+      // GLightbox (Mantido, mas talvez não usado ativamente após remoção de seções como portfolio/vídeo)
+      // Se você for usar pop-up de vídeo ou imagem, mantenha e ajuste o seletor.
+      // const videoPopup = GLightbox({ selector: ".video-popup", /* ... */ });
+      // const portfolioGallery = GLightbox({ selector: ".portfolio-box", /* ... */ });
+      
+      // Swiper para carrossel (Mantido, mas talvez não usado ativamente após remoção de seções como testimonials)
+      // const testimonialSwiper = new Swiper(".testimonial-carousel", { /* ... */ });
+    </script>
+  </body>
 </html>
