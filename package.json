@@ -1,27 +1,18 @@
 {
-  "name": "inazuma-tailwind",
+  "name": "urbanize-backend",
   "version": "1.0.0",
-  "main": "index.html",
+  "description": "Backend para a plataforma Urbanize.",
+  "main": "server.js",
   "scripts": {
-    "dev": "vite",
-    "tw-install": "npm install -D tailwindcss",
-    "tw-init": "npx tailwindcss init",
-    "tw-build": "npx tailwindcss -i ./src/css/tailwind.css -o ./assets/css/main.css --watch",
-    "tw-minify": "npx tailwindcss -o ./assets/css/main.min.css --minify"
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ranyeh24/inazuma-tailwind.git"
-  },
-  "keywords": [
-    "company",
-    "landing page"
-  ],
-  "author": "Ranyeh",
-  "license": "MIT",
-  "description": "Tailwind CSS Company Landing Page Template by Ranyeh.",
-  "devDependencies": {
-    "tailwindcss": "^3.4.10",
-    "vite": "^6.3.4"
+  "author": "Carlos Henrique",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.19.2",
+    "mysql2": "^3.10.3"
   }
 }
