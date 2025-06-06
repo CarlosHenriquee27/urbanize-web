@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,14 +10,14 @@
 
     <title>Urbanize | Plataforma de Monitoramento Urbano</title>
 
+    <!-- Links de CSS e Fontes -->
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" /> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
-
     <link rel="stylesheet" href="./assets/css/main.css" />
-  </head>
-  <body>
+</head>
+<body>
     <div class="page-loading fixed top-0 bottom-0 left-0 right-0 z-[99999] flex items-center justify-center bg-primary-light-1 dark:bg-primary-dark-1 opacity-100 visible pointer-events-auto" role="status" aria-live="polite" aria-atomic="true" aria-label="Carregando...">
       <div class="grid-loader">
         <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
@@ -53,12 +53,12 @@
               </nav>
             </div>
             <div class="flex items-center justify-end pr-[52px] lg:pr-0">
-              <button type="button" class="inline-flex items-center text-primary-color text-[24px]/none" aria-label="Mudar tema" data-web-trigger="web-theme"></button>
-              
-              <div class="hidden sm:flex">
-                <a href="login.html" class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary-color bg-opacity-20 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary" role="button">Login</a>
-              </div>
-              
+                <button type="button" class="inline-flex items-center text-primary-color text-[24px]/none" aria-label="Mudar tema" data-web-trigger="web-theme"></button>
+                
+                <!-- ✅ MUDANÇA IMPORTANTE: Adicionamos um ID aqui para o JavaScript encontrar este local -->
+                <div class="hidden sm:flex" id="nav-login-button">
+                    <a href="login.html" class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary-color bg-opacity-20 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary" role="button">Login</a>
+                </div>
             </div>
           </div>
         </div>
@@ -66,91 +66,88 @@
     </header>
 
     <main class="main relative">
-      <section id="home" class="relative overflow-hidden bg-primary text-primary-color pt-[120px] md:pt-[130px] lg:pt-[160px]">
-        <div class="container">
-          <div class="-mx-5 flex flex-wrap items-center">
-            <div class="w-full px-5">
-              <div class="scroll-revealed mx-auto max-w-[780px] text-center">
-                <h1 class="mb-6 text-3xl font-bold leading-snug text-primary-color sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight">
-                  Urbanize: Conectando Cidadãos e Gestão Pública
-                </h1>
-                <p class="mx-auto mb-9 max-w-[600px] text-base text-primary-color sm:text-lg sm:leading-normal">
-                  Facilitamos o registro e acompanhamento de problemas urbanos para melhorar nossa cidade. Juntos, podemos fazer a diferença!
-                </p>
-                <ul class="mb-10 flex flex-wrap items-center justify-center gap-4 md:gap-5">
-                  <li>
-                    <a href="login.html" class="inline-flex items-center justify-center rounded-md bg-primary-color text-primary px-5 py-3 text-center text-base font-medium shadow-md hover:bg-primary-light-5 md:px-7 md:py-[14px]" role="button">Reportar um Problema</a>
-                  </li>
-                  <li>
-                    <a href="#sobre-urbanize" class="ic-page-scroll flex items-center gap-4 rounded-md bg-primary-color/[0.15] px-5 py-3 text-base font-medium text-primary-color hover:bg-primary-color hover:text-primary md:px-7 md:py-[14px]" role="button">
-                      <i class="lni lni-question-circle text-lg/none"></i> Saiba Mais
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="w-full px-5">
-              <div class="scroll-revealed relative z-10 mx-auto max-w-[845px]">
-                <figure class="mt-16">
-                  <img src="./assets/img/hero.png" alt="Imagem representativa da cidade ou do app Urbanize" class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"/>
-                </figure>
-                <div class="absolute -left-9 bottom-0 z-[-1]">
-                  <img src="./assets/img/dots.svg" alt="" class="w-[120px] opacity-75"/>
+        <section id="home" class="relative overflow-hidden bg-primary text-primary-color pt-[120px] md:pt-[130px] lg:pt-[160px]">
+            <div class="container">
+              <div class="-mx-5 flex flex-wrap items-center">
+                <div class="w-full px-5">
+                  <div class="scroll-revealed mx-auto max-w-[780px] text-center">
+                    <h1 class="mb-6 text-3xl font-bold leading-snug text-primary-color sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight">
+                      Urbanize: Conectando Cidadãos e Gestão Pública
+                    </h1>
+                    <p class="mx-auto mb-9 max-w-[600px] text-base text-primary-color sm:text-lg sm:leading-normal">
+                      Facilitamos o registro e acompanhamento de problemas urbanos para melhorar nossa cidade. Juntos, podemos fazer a diferença!
+                    </p>
+                    <ul class="mb-10 flex flex-wrap items-center justify-center gap-4 md:gap-5">
+                      <li>
+                        <a href="login.html" class="inline-flex items-center justify-center rounded-md bg-primary-color text-primary px-5 py-3 text-center text-base font-medium shadow-md hover:bg-primary-light-5 md:px-7 md:py-[14px]" role="button">Reportar um Problema</a>
+                      </li>
+                      <li>
+                        <a href="#sobre-urbanize" class="ic-page-scroll flex items-center gap-4 rounded-md bg-primary-color/[0.15] px-5 py-3 text-base font-medium text-primary-color hover:bg-primary-color hover:text-primary md:px-7 md:py-[14px]" role="button">
+                          <i class="lni lni-question-circle text-lg/none"></i> Saiba Mais
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="absolute -right-6 -top-6 z-[-1]">
-                  <img src="./assets/img/dots.svg" alt="" class="w-[120px] opacity-75"/>
+                <div class="w-full px-5">
+                  <div class="scroll-revealed relative z-10 mx-auto max-w-[845px]">
+                    <figure class="mt-16">
+                      <img src="./assets/img/hero.png" alt="Imagem representativa da cidade ou do app Urbanize" class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"/>
+                    </figure>
+                    <div class="absolute -left-9 bottom-0 z-[-1]">
+                      <img src="./assets/img/dots.svg" alt="" class="w-[120px] opacity-75"/>
+                    </div>
+                    <div class="absolute -right-6 -top-6 z-[-1]">
+                      <img src="./assets/img/dots.svg" alt="" class="w-[120px] opacity-75"/>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="sobre-urbanize" class="section-area">
-        <div class="container">
-          <div class="grid grid-cols-1 gap-14 lg:grid-cols-2 items-center">
-            <div class="w-full">
-              <figure class="scroll-revealed max-w-[480px] mx-auto">
-                <img src="./assets/img/about-img.jpg" alt="Sobre o Urbanize" class="rounded-xl"/>
-              </figure>
-            </div>
-            <div class="w-full">
-              <div class="scroll-revealed">
-                <h6 class="mb-2 block text-lg font-semibold text-primary">
-                  Sobre o Urbanize
-                </h6>
-                <h2 class="mb-6">Nossa Missão é Melhorar Nossas Cidades</h2>
-                <p>
-                  O Urbanize é uma plataforma pensada para você, cidadão, que quer ver sua cidade melhor. Aqui, você pode reportar problemas como buracos, falta de iluminação, lixo em local inadequado, e muito mais.
-                </p>
-                <p class="mt-4">
-                  Nossa equipe está trabalhando para que a gestão pública receba essas informações de forma organizada e possa agir. Acompanhe o status do seu reporte e participe ativamente da melhoria do seu bairro!
-                </p>
-                <p class="mt-4">
-                  Este projeto está em desenvolvimento para a disciplina de Programação Web.
-                </p>
+        <section id="sobre-urbanize" class="section-area">
+            <div class="container">
+              <div class="grid grid-cols-1 gap-14 lg:grid-cols-2 items-center">
+                <div class="w-full">
+                  <figure class="scroll-revealed max-w-[480px] mx-auto">
+                    <img src="./assets/img/about-img.jpg" alt="Sobre o Urbanize" class="rounded-xl"/>
+                  </figure>
+                </div>
+                <div class="w-full">
+                  <div class="scroll-revealed">
+                    <h6 class="mb-2 block text-lg font-semibold text-primary">
+                      Sobre o Urbanize
+                    </h6>
+                    <h2 class="mb-6">Nossa Missão é Melhorar Nossas Cidades</h2>
+                    <p>
+                      O Urbanize é uma plataforma pensada para você, cidadão, que quer ver sua cidade melhor. Aqui, você pode reportar problemas como buracos, falta de iluminação, lixo em local inadequado, e muito mais.
+                    </p>
+                    <p class="mt-4">
+                      Nossa equipe está trabalhando para que a gestão pública receba essas informações de forma organizada e possa agir. Acompanhe o status do seu reporte e participe ativamente da melhoria do seu bairro!
+                    </p>
+                    <p class="mt-4">
+                      Este projeto está em desenvolvimento para a disciplina de Programação Web.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="registrar-ocorrencia" class="section-area bg-primary-light-2 dark:bg-primary-dark-2">
-        <div class="container">
-          <div class="scroll-revealed bg-body-light-1 dark:bg-primary-dark-1 rounded-xl py-8 sm:py-12 px-6 sm:px-10 z-10 relative shadow-card-1 hover:shadow-lg">
-            <div class="text-center max-w-[550px] mx-auto mb-12">
-              <h6 class="mb-2 block text-lg font-semibold text-primary">
-                Participe!
-              </h6>
-              <h2 class="mb-3">Registre um Problema Urbano</h2>
-              <p>
-                Para registrar uma ocorrência, por favor, <a href="login.html" class="text-primary font-semibold hover:underline">faça o login</a> ou <a href="cadastro.html" class="text-primary font-semibold hover:underline">crie uma conta</a>.
-              </p>
+        <!-- ✅ MUDANÇA IMPORTANTE: Adicionamos um ID no conteúdo interno desta seção -->
+        <section id="registrar-ocorrencia" class="section-area bg-primary-light-2 dark:bg-primary-dark-2">
+            <div class="container">
+                <div class="scroll-revealed bg-body-light-1 dark:bg-primary-dark-1 rounded-xl py-8 sm:py-12 px-6 sm:px-10 z-10 relative shadow-card-1">
+                    <div class="text-center max-w-[550px] mx-auto" id="registrar-ocorrencia-content">
+                        <!-- O conteúdo aqui será alterado pelo main.js -->
+                        <h6 class="mb-2 block text-lg font-semibold text-primary">Participe!</h6>
+                        <h2 class="mb-3">Registre um Problema Urbano</h2>
+                        <p>Para registrar uma ocorrência, por favor, <a href="login.html" class="text-primary font-semibold hover:underline">faça o login</a> ou <a href="cadastro.html" class="text-primary font-semibold hover:underline">crie uma conta</a>.</p>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
-      </section>
-
+        </section>
     </main>
 
     <footer class="bg-primary-dark-2 text-white">
@@ -179,16 +176,22 @@
         </div>
       </div>
     </footer>
-
+    
     <button type="button" class="inline-flex w-12 h-12 rounded-md items-center justify-center text-lg/none bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10 fixed bottom-[117px] right-[20px] hover:-translate-y-1 opacity-100 visible z-50 is-hided" data-web-trigger="scroll-top" aria-label="Voltar ao topo">
       <i class="lni lni-chevron-up"></i>
     </button>
-
+    
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script> <!-- Script original do template -->
+    
+    <!-- ✅ MUDANÇA IMPORTANTE: Adicionamos nosso novo script aqui -->
+    <script src="js/main.js"></script> 
+    
     <script>
+      // (O script de ScrollReveal continua como antes)
       const sr = ScrollReveal({
         origin: "bottom",
         distance: "16px",
@@ -199,5 +202,5 @@
         cleanup: true,
       });
     </script>
-  </body>
+</body>
 </html>
