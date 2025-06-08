@@ -1,34 +1,72 @@
-Urbanize - Plataforma de Monitoramento Urbano
-Descrição do Projeto
-Urbanize é uma plataforma web desenvolvida para facilitar a comunicação entre cidadãos e a gestão pública. O objetivo é permitir que usuários registrem problemas urbanos (como buracos, problemas de iluminação, etc.) e acompanhem a resolução, criando um canal direto e transparente para a melhoria da infraestrutura da cidade.
+Projeto Urbanize - Plataforma de Monitoramento Urbano
 
-Este projeto foi desenvolvido como parte da disciplina de Programação para Web.
+## 1. Visão Geral do Projeto
 
-Status Atual
-O projeto conta com as seguintes funcionalidades implementadas:
+Aplicação web para comunicação entre cidadãos e gestão pública sobre problemas de infraestrutura urbana. O sistema conta com autenticação de usuários para o registro de ocorrências.
 
-Sistema de Login e Cadastro de usuários com validação e armazenamento seguro de senhas.
+Links do Projeto:
+Repositório do Código: [https://github.com/CarlosHenriquee27/urbanize-web](https://github.com/CarlosHenriquee27/urbanize-web)
+Frontend (Site Online): [https://urbanize-web.vercel.app/](https://urbanize-web.vercel.app/)
+Backend (API Online): [https://urbanize-web-production.up.railway.app/](https://urbanize-web-production.up.railway.app/)
 
-Conexão com banco de dados MySQL hospedado no Railway.
+---
 
-Backend desenvolvido em Node.js com Express.
+## 2. Funcionalidades Principais
 
-Frontend construído com HTML, CSS e JavaScript puro.
+Sistema de Usuários: Cadastro seguro com senhas criptografadas, login e gerenciamento de sessão no frontend via `localStorage`.
+Registro de Ocorrências: Formulário para usuários logados registrarem problemas, associando a ocorrência ao seu ID.
 
-Como Visualizar
-Frontend (Site Online): https://urbanize-web.vercel.app/
+---
 
-Backend (API Online): https://urbanize-web-production.up.railway.app/
+## 3. Tecnologias Utilizadas
 
-Como Rodar Localmente
-Clone este repositório: git clone https://github.com/CarlosHenriquee27/urbanize-web.git
+Frontend: HTML5, CSS3, JavaScript (ES6+), API Fetch. Hospedado na Vercel.
+Backend: Node.js, Express.js, `mysql2`, `bcryptjs`, `cors`, `dotenv`. Hospedado no Railway.
+Banco de Dados: MySQL. Hospedado no Railway.
 
-Navegue até a pasta do projeto: cd urbanize-web
+---
 
-Instale as dependências do backend: npm install
 
-Crie um arquivo .env na raiz do projeto e adicione sua DATABASE_URL do Railway.
+## 5. Endpoints da API
 
-Inicie o servidor backend: node server.js
+`POST /cadastro`
+    Recebe: `{ "nome", "email", "senha" }`
+    Função: Cria um novo usuário.
 
-Abra qualquer um dos arquivos HTML da pasta public no seu navegador.
+`POST /login`
+    Recebe: `{ "email", "senha" }`
+    Função: Autentica um usuário.
+
+`POST /ocorrencias`
+    Recebe: `{ "tipo", "descricao", "localizacao", "usuario_id" }`
+    Função: Salva uma nova ocorrência.
+
+---
+
+## 6. Como Rodar o Projeto Localmente
+
+1.  Clone o Repositório:
+    ```bash
+    git clone [https://github.com/CarlosHenriquee27/urbanize-web.git](https://github.com/CarlosHenriquee27/urbanize-web.git)
+    cd urbanize-web
+    ```
+
+2.  Instale as Dependências:
+    ```bash
+    npm install
+    ```
+
+3.  Configure o `.env`:
+    Crie um arquivo `.env` na raiz.
+    Adicione a linha: `DATABASE_URL="mysql://root:SUA_SENHA@SEU_HOST:PORTA/railway"`
+
+4.  Inicie o Servidor:
+    ```bash
+    node server.js
+    ```
+
+5.  Abra o Frontend:
+    Abra um dos arquivos HTML da pasta `public` no seu navegador.
+    Para testes locais, a `backendUrl` nos arquivos `.js` deve ser `http://localhost:3000`.
+
+---
