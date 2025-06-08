@@ -18,7 +18,6 @@
             <h2>Registrar Nova Ocorrência</h2>
             <p>Preencha os detalhes abaixo para nos ajudar a identificar o problema.</p>
         </header>
-
         <form class="form-body" id="occurrenceForm">
             <div class="form-group">
                 <label for="tipo">Categoria do Problema</label>
@@ -37,12 +36,10 @@
                 <label for="localizacao">Localização Exata</label>
                 <input type="text" id="localizacao" name="localizacao" placeholder="Ex: Rua Principal, em frente ao número 123" required>
             </div>
-
             <div class="form-group">
                 <label for="descricao">Descrição Detalhada</label>
                 <textarea id="descricao" name="descricao" rows="6" placeholder="Descreva o problema com o máximo de detalhes possível..." required></textarea>
             </div>
-            
             <div class="form-group">
                 <label>Anexar uma Foto (Opcional)</label>
                 <label for="foto" class="file-upload-label">
@@ -54,7 +51,6 @@
                     <img id="image-preview" class="image-preview" src="#" alt="Pré-visualização da imagem" />
                 </div>
             </div>
-            
             <button type="submit" class="submit-button">Enviar Ocorrência</button>
             <p id="success-message" class="success-message"></p>
         </form>

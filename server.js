@@ -107,8 +107,6 @@ app.post('/cadastro', async (req, res) => {
     res.status(500).json({ message: 'Erro interno no servidor ao tentar cadastrar usuário.' });
   }
 });
-
-
 // 7. Fazer o servidor "escutar" por requisições na porta definida
 app.listen(PORT, () => {
   console.log(`Servidor Urbanize rodando na porta ${PORT}`);

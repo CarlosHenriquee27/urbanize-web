@@ -1,5 +1,3 @@
-// js/cadastro.js
-
 document.getElementById('cadastroForm').addEventListener('submit', async function(event) {
     event.preventDefault(); // Impede o recarregamento da página
 

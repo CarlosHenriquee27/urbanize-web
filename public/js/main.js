@@ -1,5 +1,3 @@
-// js/main.js
-
 // Esta função roda assim que a página principal (index.html) termina de carregar.
 document.addEventListener('DOMContentLoaded', () => {
     // Procura no "localStorage" se tem informações de usuário guardadas.
