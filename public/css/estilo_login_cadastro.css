@@ -1,0 +1,60 @@
+/* css/estilo_login_cadastro.css */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+.form-container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+.form-header .logo { max-width: 180px; margin-bottom: 20px; }
+.form-header h2 { font-size: 24px; margin-bottom: 20px; color: #333; }
+.form-body { margin-top: 20px; }
+.form-group { margin-bottom: 20px; text-align: left; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: #555; }
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+.submit-button {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+.submit-button:hover { background-color: #0056b3; }
+.error-message {
+    color: #dc3545;
+    margin-top: 15px;
+    font-size: 14px;
+    height: 20px; 
+}
+.form-footer { margin-top: 25px; font-size: 14px; }
+.form-footer a { color: #007bff; text-decoration: none; margin: 0 10px; }
+.form-footer a:hover { text-decoration: underline; }
