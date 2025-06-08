@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Ocorrência - Urbanize</title>
-    <!-- Link para o seu arquivo CSS. O nome foi mantido. -->
     <link rel="stylesheet" href="css/estilo_ocorrencia.css">
-    <!-- Link para a fonte do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Link para ícones (usaremos para o upload de fotos) -->
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+    <link rel="icon" type="image/png" href="assets/img/logo_urbanize.png" />
 </head>
 <body>
     <div class="form-container">
         <header class="form-header">
+            <!-- ✅ LOGO ADICIONADA E COM TAMANHO AJUSTADO ✅ -->
+            <img src="assets/img/logo_urbanize.png" alt="Logo Urbanize" class="logo" style="max-width: 180px; margin-bottom: 20px;">
+            
             <a href="index.html" class="back-link">&larr; Voltar à Página Principal</a>
             <h2>Registrar Nova Ocorrência</h2>
             <p>Preencha os detalhes abaixo para nos ajudar a identificar o problema.</p>
@@ -42,8 +43,7 @@
                 <label for="descricao">Descrição Detalhada</label>
                 <textarea id="descricao" name="descricao" rows="6" placeholder="Descreva o problema com o máximo de detalhes possível..." required></textarea>
             </div>
-
-            <!-- Seção melhorada para anexar fotos -->
+            
             <div class="form-group">
                 <label>Anexar uma Foto (Opcional)</label>
                 <label for="foto" class="file-upload-label">
@@ -51,7 +51,6 @@
                     <span id="file-name-display">Clique para escolher um arquivo...</span>
                 </label>
                 <input type="file" id="foto" name="foto" class="file-upload-input" accept="image/*">
-                <!-- Área para pré-visualização da imagem -->
                 <div class="image-preview-container">
                     <img id="image-preview" class="image-preview" src="#" alt="Pré-visualização da imagem" />
                 </div>
@@ -61,8 +60,6 @@
             <p id="success-message" class="success-message"></p>
         </form>
     </div>
-
-    <!-- Script para esta página. O nome foi mantido. -->
     <script src="js/ocorrencia.js"></script>
 </body>
 </html>

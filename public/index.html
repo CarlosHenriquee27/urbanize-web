@@ -11,11 +11,12 @@
     <title>Urbanize | Plataforma de Monitoramento Urbano</title>
 
     <!-- Links de CSS e Fontes -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" /> 
+    <!-- ✅ ÍCONE DA ABA (FAVICON) ADICIONADO ✅ -->
+   <link rel="icon" type="image/png" href="assets/img/logo_urbanize.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
     <div class="page-loading fixed top-0 bottom-0 left-0 right-0 z-[99999] flex items-center justify-center bg-primary-light-1 dark:bg-primary-dark-1 opacity-100 visible pointer-events-auto" role="status" aria-live="polite" aria-atomic="true" aria-label="Carregando...">
@@ -29,7 +30,8 @@
         <div class="ic-navbar-container relative -mx-5 flex items-center justify-between">
           <div class="w-60 lg:w-56 max-w-full px-5">
             <a href="." class="ic-navbar-logo block w-full py-5 text-2xl font-bold text-primary-color">
-              Urbanize
+              <!-- ✅ LOGO NA BARRA DE NAVEGAÇÃO ✅ -->
+              <img src="assets/img/logo_urbanize.png" ...>
             </a>
           </div>
           <div class="flex w-full items-center justify-between px-5">
@@ -54,8 +56,6 @@
             </div>
             <div class="flex items-center justify-end pr-[52px] lg:pr-0">
                 <button type="button" class="inline-flex items-center text-primary-color text-[24px]/none" aria-label="Mudar tema" data-web-trigger="web-theme"></button>
-                
-                <!-- ✅ MUDANÇA IMPORTANTE: Adicionamos um ID aqui para o JavaScript encontrar este local -->
                 <div class="hidden sm:flex" id="nav-login-button">
                     <a href="login.html" class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary-color bg-opacity-20 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary" role="button">Login</a>
                 </div>
@@ -92,13 +92,13 @@
                 <div class="w-full px-5">
                   <div class="scroll-revealed relative z-10 mx-auto max-w-[845px]">
                     <figure class="mt-16">
-                      <img src="./assets/img/hero.png" alt="Imagem representativa da cidade ou do app Urbanize" class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"/>
+                      <img src="assets/img/imagem-principal-urbanize.jpg" alt="Vista aérea da cidade com o logo do Urbanize" class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"/>
                     </figure>
                     <div class="absolute -left-9 bottom-0 z-[-1]">
-                      <img src="./assets/img/dots.svg" alt="" class="w-[120px] opacity-75"/>
+                      <img src="assets/img/dots.svg" alt="" class="w-[120px] opacity-75"/>
                     </div>
                     <div class="absolute -right-6 -top-6 z-[-1]">
-                      <img src="./assets/img/dots.svg" alt="" class="w-[120px] opacity-75"/>
+                      <img src="assets/img/dots.svg" alt="" class="w-[120px] opacity-75"/>
                     </div>
                   </div>
                 </div>
@@ -111,7 +111,7 @@
               <div class="grid grid-cols-1 gap-14 lg:grid-cols-2 items-center">
                 <div class="w-full">
                   <figure class="scroll-revealed max-w-[480px] mx-auto">
-                    <img src="./assets/img/about-img.jpg" alt="Sobre o Urbanize" class="rounded-xl"/>
+                    <img src="assets/img/mapa_urbanize.jpg" alt="Mapa da cidade com pontos de ocorrências" class="rounded-xl"/>
                   </figure>
                 </div>
                 <div class="w-full">
@@ -135,15 +135,11 @@
             </div>
         </section>
 
-        <!-- ✅ MUDANÇA IMPORTANTE: Adicionamos um ID no conteúdo interno desta seção -->
         <section id="registrar-ocorrencia" class="section-area bg-primary-light-2 dark:bg-primary-dark-2">
             <div class="container">
                 <div class="scroll-revealed bg-body-light-1 dark:bg-primary-dark-1 rounded-xl py-8 sm:py-12 px-6 sm:px-10 z-10 relative shadow-card-1">
                     <div class="text-center max-w-[550px] mx-auto" id="registrar-ocorrencia-content">
-                        <!-- O conteúdo aqui será alterado pelo main.js -->
-                        <h6 class="mb-2 block text-lg font-semibold text-primary">Participe!</h6>
-                        <h2 class="mb-3">Registre um Problema Urbano</h2>
-                        <p>Para registrar uma ocorrência, por favor, <a href="login.html" class="text-primary font-semibold hover:underline">faça o login</a> ou <a href="cadastro.html" class="text-primary font-semibold hover:underline">crie uma conta</a>.</p>
+                        <!-- O JavaScript vai inserir o conteúdo aqui -->
                     </div>
                 </div>
             </div>
@@ -151,30 +147,30 @@
     </main>
 
     <footer class="bg-primary-dark-2 text-white">
-      <div class="container py-20 lg:py-[100px]">
-        <div class="row justify-center">
-          <div class="col-12 lg:col-6 text-center lg:text-left">
-            <div class="w-full">
-              <a href="." class="inline-block mb-5 text-2xl font-bold text-white">
-                Urbanize
-              </a>
-              <p class="mb-8 text-body-dark-11">
-                Uma plataforma para conectar cidadãos e gestão pública, melhorando nossas cidades.
+        <div class="container py-20 lg:py-[100px]">
+          <div class="row justify-center">
+            <div class="col-12 lg:col-6 text-center lg:text-left">
+              <div class="w-full">
+                <a href="." class="inline-block mb-5 text-2xl font-bold text-white">
+                  Urbanize
+                </a>
+                <p class="mb-8 text-body-dark-11">
+                  Uma plataforma para conectar cidadãos e gestão pública, melhorando nossas cidades.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full border-t border-solid border-alpha-dark"></div>
+        <div class="container py-8">
+          <div class="flex flex-wrap">
+            <div class="w-full text-center">
+              <p class="text-body-dark-11">
+                © 2025 Urbanize | Projeto para a disciplina de Programação Web
               </p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="w-full border-t border-solid border-alpha-dark"></div>
-      <div class="container py-8">
-        <div class="flex flex-wrap">
-          <div class="w-full text-center">
-            <p class="text-body-dark-11">
-              © 2025 Urbanize
-            </p>
-          </div>
-        </div>
-      </div>
     </footer>
     
     <button type="button" class="inline-flex w-12 h-12 rounded-md items-center justify-center text-lg/none bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10 fixed bottom-[117px] right-[20px] hover:-translate-y-1 opacity-100 visible z-50 is-hided" data-web-trigger="scroll-top" aria-label="Voltar ao topo">
@@ -185,13 +181,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-    <script src="./assets/js/main.js"></script> <!-- Script original do template -->
-    
-    <!-- ✅ MUDANÇA IMPORTANTE: Adicionamos nosso novo script aqui -->
+    <script src="assets/js/main.js"></script> 
     <script src="js/main.js"></script> 
-    
     <script>
-      // (O script de ScrollReveal continua como antes)
       const sr = ScrollReveal({
         origin: "bottom",
         distance: "16px",
