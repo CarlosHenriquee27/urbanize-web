@@ -70,3 +70,6 @@ Banco de Dados: MySQL. Hospedado no Railway.
     Para testes locais, a `backendUrl` nos arquivos `.js` deve ser `http://localhost:3000`.
 
 ---
+
+
+
